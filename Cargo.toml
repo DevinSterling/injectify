@@ -11,4 +11,4 @@ keywords = ["macros", "trait"]
 members = [ "injectify_macro" ]
 
 [dependencies]
-injectify_macro = { path = "injectify_macro" }
+injectify_macro = { path = "injectify_macro", version = "1.0.0" }
