@@ -5,7 +5,7 @@ version = "1.0.0"
 edition = "2021"
 license = "MIT OR GPL-3.0"
 repository = "https://github.com/DevinSterling/injectify/injectify_macro"
-keywords = ["trait"]
+keywords = ["macros", "trait"]
 
 [lib]
 proc_macro = true
