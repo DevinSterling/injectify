@@ -1,5 +1,5 @@
 /.idea
 /target
 /Cargo.lock
-/injectify_macro/target
-/injectify_macro/Cargo.lock
+/injectify_impl/target
+/injectify_impl/Cargo.lock

@@ -1,1 +1,1 @@
-pub use injectify_macro::Injectify;
+pub use injectify_impl::Injectify;

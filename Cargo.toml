@@ -1,6 +1,7 @@
 [package]
 authors = ["Devin Sterling"]
 name = "injectify"
+description = "Utility library to use impl Trait in structs."
 version = "1.0.0"
 edition = "2021"
 license = "MIT OR GPL-3.0"
@@ -8,7 +9,7 @@ repository = "https://github.com/DevinSterling/injectify"
 keywords = ["macros", "trait"]
 
 [workspace]
-members = [ "injectify_macro" ]
+members = ["injectify_impl"]
 
 [dependencies]
-injectify_macro = { path = "injectify_macro", version = "1.0.0" }
+injectify_impl = "1.0.0"
