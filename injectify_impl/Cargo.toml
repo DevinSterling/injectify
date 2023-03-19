@@ -1,10 +1,10 @@
 [package]
 authors = ["Devin Sterling"]
-name = "injectify_macro"
+name = "injectify_impl"
 version = "1.0.0"
 edition = "2021"
 license = "MIT OR GPL-3.0"
-repository = "https://github.com/DevinSterling/injectify/injectify_macro"
+repository = "https://github.com/DevinSterling/injectify/injectify_impl"
 keywords = ["macros", "trait"]
 
 [lib]
