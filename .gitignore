@@ -1,3 +1,4 @@
+/.idea
 /target
 /Cargo.lock
 /injectify_macro/target
