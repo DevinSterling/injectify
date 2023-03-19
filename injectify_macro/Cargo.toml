@@ -1,0 +1,15 @@
+[package]
+authors = ["Devin Sterling"]
+name = "injectify_macro"
+version = "1.0.0"
+edition = "2021"
+license = "MIT OR GPL-3.0"
+repository = "https://github.com/DevinSterling/injectify/injectify_macro"
+keywords = ["trait"]
+
+[lib]
+proc_macro = true
+
+[dependencies]
+quote = "1.0.26"
+syn = "2.0.0"

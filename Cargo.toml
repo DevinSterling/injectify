@@ -1,0 +1,14 @@
+[package]
+authors = ["Devin Sterling"]
+name = "injectify"
+version = "1.0.0"
+edition = "2021"
+license = "MIT OR GPL-3.0"
+repository = "https://github.com/DevinSterling/injectify/injectify_macro"
+keywords = ["trait"]
+
+[workspace]
+members = [ "injectify_macro" ]
+
+[dependencies]
+injectify_macro = { path = "injectify_macro" }
