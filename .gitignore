@@ -1,2 +1,4 @@
 /target
 /Cargo.lock
+/injectify_macro/target
+/injectify_macro/Cargo.lock
