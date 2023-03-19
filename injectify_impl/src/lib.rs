@@ -41,25 +41,23 @@ fn injectify_struct_impl(struct_data: DataStruct, derive_input: DeriveInput) -> 
             let field_type = field.ty.to_token_stream().to_string();
 
             // Field to modify
-            if field_type.starts_with("impl ") {
-                let trait_str = field_type
-                    .strip_prefix("impl ")
-                    .expect("Should have prefix");
-                let impl_trait: Expr = syn::parse_str(trait_str).expect("Should be an expression");
-                let generic = format_ident!("_IJ_{}", generated_generics.len());
+            match field_type.strip_prefix("impl ") {
+                Some(trait_str) => {
+                    let impl_trait: Expr =
+                        syn::parse_str(trait_str).expect("Should be an expression");
+                    let generic = format_ident!("_IJ_{}", generated_generics.len());
 
-                generated_generics.push(quote!(
-                    #generic: #impl_trait,
-                ));
+                    generated_generics.push(quote!(
+                        #generic: #impl_trait,
+                    ));
 
-                quote!(
-                    #(#attrs)*
-                    #vis #ident: #generic,
-                )
-            }
-            // Keep field as is
-            else {
-                quote!(#field,)
+                    quote!(
+                        #(#attrs)*
+                        #vis #ident: #generic,
+                    )
+                }
+                // Keep field as is
+                None => quote!(#field,),
             }
         })
         .collect();
